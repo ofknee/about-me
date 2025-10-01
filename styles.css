@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;1,200&display=swap');
 /* fonts */
 @font-face {
   font-family: 'theatrical';
@@ -146,7 +147,7 @@ p {
 
 .line-list {
     width: 100%;
-    padding-top: 30vh;
+    padding-top: 15vh;
     padding-bottom: 0vh;
     padding-left: 7vh;
     padding-right: 0vh;
@@ -180,9 +181,77 @@ p {
     position: fixed;
     bottom: 0;
     right: 0;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* border: 1px solid rgba(255, 255, 255, 0.25); */
     border-radius: 1vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
+    -webkit-backdrop-filter: blur(1.5vh) saturate(140%);
+    backdrop-filter: blur(1.5vh) saturate(140%);
     padding: 1vh 2vh;
-    margin: 1vh;
+    margin: 4vh;
+    font-size: 3vh;
+    display: flex;
+    align-items: center;
+    font-family: 'Spectral', ui-serif, Georgia, serif;
+    font-weight: 200;
+    color: rgb(195, 220, 232);
+    text-decoration: none;
+    z-index: 3;
+    overflow: hidden;
+    box-shadow:
+        0 0.5vh 2vh rgba(0, 0, 0, 0.35), 
+        inset 0 0 1.2vh rgba(186, 161, 249, 0.22), 
+        inset 0 0 1.2vh rgba(146, 172, 233, 0.18), 
+        inset 0 0 0.3vh rgba(255, 255, 255, 0.15);
+    transition: box-shadow 200ms ease, background 200ms ease;
+
+}
+
+.contact::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(120% 60% at 50% -20%, rgba(186, 161, 249, 0.25) 0%, rgba(146, 172, 233, 0.16) 35%, rgba(255, 255, 255, 0.10) 50%, rgba(255, 255, 255, 0) 65%),
+        linear-gradient( to bottom right, rgba(186, 161, 249, 0.08), rgba(146, 172, 233, 0.06) );
+    pointer-events: none;
+    opacity: 0.7;
+    transform: translateY(-5%);
+    transition: transform 400ms ease, opacity 400ms ease;
+}
+
+.contact img {
+    width: 3vh;
+    height: 3vh;
+    image-rendering: auto;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    margin-right: 1vh;
+}
+
+.contact:hover::before {
+    transform: translateY(-8%);
+    opacity: 0.9;
+}
+
+.contact:hover {
+    box-shadow:
+        0 0.7vh 2.5vh rgba(0, 0, 0, 0.45),
+        inset 0 0 1.5vh rgba(186, 161, 249, 0.28),
+        inset 0 0 1.5vh rgba(146, 172, 233, 0.22),
+        inset 0 0 0.4vh rgba(255, 255, 255, 0.2);
+}
+
+.contact a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Spectral', ui-serif, Georgia, serif;
+    font-weight: 200;
+
+}
+.contact a:hover {
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 0.2vh;
+    text-underline-offset: 0.2vh;
+    text-decoration-color: rgb(186, 161, 249);
 }
