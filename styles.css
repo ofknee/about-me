@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,200;9..144,300;9..144,400&display=swap');
 /* fonts */
 @font-face {
   font-family: 'theatrical';
@@ -183,15 +183,15 @@ p {
     right: 0;
     /* border: 1px solid rgba(255, 255, 255, 0.25); */
     border-radius: 1vh;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
+    background: linear-gradient(135deg, rgba(183, 29, 255, 0.1), rgba(61, 113, 255, 0.03));
     -webkit-backdrop-filter: blur(1.5vh) saturate(140%);
     backdrop-filter: blur(1.5vh) saturate(140%);
-    padding: 1vh 2vh;
+    padding: 1vh 2.4vh;
     margin: 4vh;
     font-size: 3vh;
     display: flex;
     align-items: center;
-    font-family: 'Spectral', ui-serif, Georgia, serif;
+    font-family: 'Fraunces', ui-serif, Georgia, serif;
     font-weight: 200;
     color: rgb(195, 220, 232);
     text-decoration: none;
@@ -199,10 +199,10 @@ p {
     overflow: hidden;
     box-shadow:
         0 0.5vh 2vh rgba(0, 0, 0, 0.35), 
-        inset 0 0 1.2vh rgba(186, 161, 249, 0.22), 
-        inset 0 0 1.2vh rgba(146, 172, 233, 0.18), 
-        inset 0 0 0.3vh rgba(255, 255, 255, 0.15);
-    transition: box-shadow 200ms ease, background 200ms ease;
+        inset 0 0 1.2vh rgba(59, 4, 197, 0.02), 
+        inset 0 0 1.2vh rgba(1, 64, 211, 0.08), 
+        inset 0 0 0.3vh rgba(213, 1, 1, 0.05);
+    transition: box-shadow 000ms ease, background 200ms ease;
 
 }
 
@@ -214,7 +214,7 @@ p {
         radial-gradient(120% 60% at 50% -20%, rgba(186, 161, 249, 0.25) 0%, rgba(146, 172, 233, 0.16) 35%, rgba(255, 255, 255, 0.10) 50%, rgba(255, 255, 255, 0) 65%),
         linear-gradient( to bottom right, rgba(186, 161, 249, 0.08), rgba(146, 172, 233, 0.06) );
     pointer-events: none;
-    opacity: 0.7;
+    opacity: 0.2;
     transform: translateY(-5%);
     transition: transform 400ms ease, opacity 400ms ease;
 }
@@ -230,22 +230,24 @@ p {
 
 .contact:hover::before {
     transform: translateY(-8%);
-    opacity: 0.9;
+    opacity: 0.5;
 }
 
 .contact:hover {
     box-shadow:
-        0 0.7vh 2.5vh rgba(0, 0, 0, 0.45),
-        inset 0 0 1.5vh rgba(186, 161, 249, 0.28),
-        inset 0 0 1.5vh rgba(146, 172, 233, 0.22),
-        inset 0 0 0.4vh rgba(255, 255, 255, 0.2);
+        0 0.7vh 2.5vh rgba(0, 0, 0, 0.38),
+        inset 0 0 1.5vh rgba(69, 7, 227, 0.18),
+        inset 0 0 1.5vh rgba(6, 71, 223, 0.14),
+        inset 0 0 0.4vh rgba(187, 7, 7, 0.12);
 }
 
 .contact a {
     color: #ffffff;
     text-decoration: none;
-    font-family: 'Spectral', ui-serif, Georgia, serif;
+    font-family: 'Fraunces', ui-serif, Georgia, serif;
     font-weight: 200;
+    padding-bottom: 0.35vh;
+
 
 }
 .contact a:hover {
@@ -254,4 +256,21 @@ p {
     text-decoration-thickness: 0.2vh;
     text-underline-offset: 0.2vh;
     text-decoration-color: rgb(186, 161, 249);
+}
+
+/* bottom purple shadow under the contact area */
+body::after {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 30vh;
+    pointer-events: none;
+    z-index: 2;
+    background: linear-gradient(
+        to top,
+        rgb(7, 24, 91) 0%,
+        rgba(134, 83, 220, 0.0) 50%
+    );
 }
